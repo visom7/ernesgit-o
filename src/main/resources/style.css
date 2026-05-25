@@ -1,0 +1,387 @@
+/* ================================================================
+   ErnesGit-O — Tema oscuro Tokyo Night
+   ================================================================ */
+
+/* ── Variables de color ────────────────────────────────────────── */
+* {
+    -color-bg:        #13141a;
+    -color-sidebar:   #0d0e14;
+    -color-panel:     #1a1b26;
+    -color-surface:   #24283b;
+    -color-border:    #292a37;
+    -color-accent:    #7aa2f7;
+    -color-green:     #9ece6a;
+    -color-red:       #f7768e;
+    -color-orange:    #e0af68;
+    -color-purple:    #bb9af7;
+    -color-cyan:      #7dcfff;
+    -color-text:      #c0caf5;
+    -color-muted:     #565f89;
+    -color-header-bg: #16161e;
+}
+
+/* ── Root ──────────────────────────────────────────────────────── */
+.main-root {
+    -fx-background-color: -color-bg;
+}
+
+/* ── Toolbar ───────────────────────────────────────────────────── */
+.toolbar {
+    -fx-background-color: -color-header-bg;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.toolbar-logo {
+    -fx-text-fill: -color-accent;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Monospaced";
+}
+
+.toolbar-repo {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 12px;
+    -fx-font-family: "Monospaced";
+}
+
+.toolbar-branch {
+    -fx-text-fill: -color-green;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(158,206,106,0.1);
+    -fx-background-radius: 12px;
+    -fx-padding: 3 10 3 10;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────────── */
+.sidebar {
+    -fx-background-color: -color-sidebar;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 1 0 0;
+}
+
+.sidebar-sep {
+    -fx-background-color: -color-border;
+}
+
+/* ── Nav buttons ───────────────────────────────────────────────── */
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 13px;
+    -fx-padding: 10 12 10 12;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.nav-btn:hover {
+    -fx-background-color: rgba(122,162,247,0.08);
+    -fx-text-fill: -color-text;
+}
+
+.nav-btn:selected {
+    -fx-background-color: rgba(122,162,247,0.18);
+    -fx-text-fill: -color-accent;
+    -fx-font-weight: bold;
+}
+
+.nav-btn:disabled {
+    -fx-opacity: 0.4;
+}
+
+/* ── Content area ──────────────────────────────────────────────── */
+.content-area {
+    -fx-background-color: -color-bg;
+}
+
+/* ── Panels ────────────────────────────────────────────────────── */
+.panel {
+    -fx-background-color: -color-bg;
+}
+
+.panel-header {
+    -fx-background-color: -color-header-bg;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.panel-title {
+    -fx-text-fill: -color-text;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────── */
+.btn-primary {
+    -fx-background-color: -color-accent;
+    -fx-text-fill: #1a1b26;
+    -fx-font-weight: bold;
+    -fx-padding: 7 16 7 16;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+.btn-primary:hover {
+    -fx-background-color: derive(-color-accent, 15%);
+}
+
+.btn-secondary {
+    -fx-background-color: -color-surface;
+    -fx-text-fill: -color-text;
+    -fx-padding: 7 14 7 14;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+}
+.btn-secondary:hover {
+    -fx-background-color: derive(-color-surface, 10%);
+}
+
+.btn-action {
+    -fx-background-color: rgba(122,162,247,0.15);
+    -fx-text-fill: -color-accent;
+    -fx-padding: 7 14 7 14;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(122,162,247,0.3);
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+}
+.btn-action:hover {
+    -fx-background-color: rgba(122,162,247,0.25);
+}
+
+.btn-danger {
+    -fx-background-color: rgba(247,118,142,0.15);
+    -fx-text-fill: -color-red;
+    -fx-padding: 7 14 7 14;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(247,118,142,0.3);
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+}
+.btn-danger:hover {
+    -fx-background-color: rgba(247,118,142,0.25);
+}
+
+/* ── Lists ─────────────────────────────────────────────────────── */
+.branch-list, .stash-list, .remote-list, .conflict-list {
+    -fx-background-color: -color-surface;
+    -fx-background-radius: 8px;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.branch-list .list-cell, .stash-list .list-cell,
+.remote-list .list-cell, .conflict-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-text;
+    -fx-padding: 8 12 8 12;
+}
+
+.branch-list .list-cell:hover, .stash-list .list-cell:hover,
+.remote-list .list-cell:hover, .conflict-list .list-cell:hover {
+    -fx-background-color: rgba(122,162,247,0.08);
+}
+
+.branch-list .list-cell:selected, .stash-list .list-cell:selected,
+.remote-list .list-cell:selected, .conflict-list .list-cell:selected {
+    -fx-background-color: rgba(122,162,247,0.18);
+}
+
+/* ── Branch cells ──────────────────────────────────────────────── */
+.branch-icon-current { -fx-text-fill: -color-green; -fx-font-size: 14px; }
+.branch-icon         { -fx-text-fill: -color-muted; -fx-font-size: 14px; }
+.branch-name-current { -fx-text-fill: -color-green; -fx-font-weight: bold; }
+.branch-name         { -fx-text-fill: -color-text; }
+.branch-tracking     { -fx-text-fill: -color-muted; -fx-font-size: 11px; }
+
+/* ── Badges ────────────────────────────────────────────────────── */
+.badge-current {
+    -fx-background-color: rgba(158,206,106,0.15);
+    -fx-text-fill: -color-green;
+    -fx-padding: 3 8 3 8;
+    -fx-background-radius: 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.badge-current-small {
+    -fx-background-color: rgba(158,206,106,0.15);
+    -fx-text-fill: -color-green;
+    -fx-padding: 2 6 2 6;
+    -fx-background-radius: 8px;
+    -fx-font-size: 10px;
+}
+
+.ref-head   { -fx-background-color: rgba(224,175,104,0.2); -fx-text-fill: -color-orange; -fx-padding: 1 5; -fx-background-radius: 4px; -fx-font-size: 11px; }
+.ref-remote { -fx-background-color: rgba(247,118,142,0.15); -fx-text-fill: -color-red;    -fx-padding: 1 5; -fx-background-radius: 4px; -fx-font-size: 11px; }
+.ref-local  { -fx-background-color: rgba(122,162,247,0.15); -fx-text-fill: -color-accent; -fx-padding: 1 5; -fx-background-radius: 4px; -fx-font-size: 11px; }
+
+/* ── Table ─────────────────────────────────────────────────────── */
+.commits-table {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+}
+
+.commits-table .column-header-background {
+    -fx-background-color: -color-header-bg;
+}
+
+.commits-table .column-header .label {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-transform: uppercase;
+}
+
+.commits-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent -color-border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.commits-table .table-row-cell:hover { -fx-background-color: rgba(122,162,247,0.07); }
+.commits-table .table-row-cell:selected { -fx-background-color: rgba(122,162,247,0.16); }
+
+.commits-table .table-cell {
+    -fx-text-fill: -color-text;
+    -fx-font-size: 12px;
+    -fx-padding: 6 8 6 8;
+}
+
+.col-hash .table-cell { -fx-font-family: "Monospaced"; -fx-text-fill: -color-cyan; }
+
+/* ── Diff area ─────────────────────────────────────────────────── */
+.diff-area {
+    -fx-control-inner-background: #0d0e14;
+    -fx-text-fill: #a9b1d6;
+    -fx-font-family: "Monospaced";
+    -fx-font-size: 12px;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.diff-container {
+    -fx-background-color: -color-header-bg;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* ── Forms ─────────────────────────────────────────────────────── */
+.search-field {
+    -fx-control-inner-background: -color-surface;
+    -fx-text-fill: -color-text;
+    -fx-prompt-text-fill: -color-muted;
+    -fx-background-radius: 6px;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+    -fx-padding: 6 10 6 10;
+}
+
+.combo-dark {
+    -fx-control-inner-background: -color-surface;
+    -fx-background-color: -color-surface;
+    -fx-text-fill: -color-text;
+    -fx-prompt-text-fill: -color-muted;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+}
+.combo-dark .list-cell { -fx-text-fill: -color-text; -fx-background-color: -color-surface; }
+
+.check-dark {
+    -fx-text-fill: -color-text;
+}
+.check-dark .box {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+}
+.check-dark:selected .mark { -fx-background-color: -color-accent; }
+
+/* ── Labels ────────────────────────────────────────────────────── */
+.label-muted { -fx-text-fill: -color-muted; -fx-font-size: 12px; }
+
+.list-section-label {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ── Actions bar ───────────────────────────────────────────────── */
+.actions-bar {
+    -fx-background-color: -color-header-bg;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1 0 0 0;
+}
+
+.quick-actions-bar {
+    -fx-background-color: rgba(36,40,59,0.7);
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* ── Stash cells ───────────────────────────────────────────────── */
+.stash-ref { -fx-text-fill: -color-accent; -fx-font-size: 11px; -fx-font-family: "Monospaced"; }
+.stash-msg { -fx-text-fill: -color-text; -fx-font-size: 13px; }
+
+/* ── Save stash ────────────────────────────────────────────────── */
+.save-stash-box {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* ── Remote section ────────────────────────────────────────────── */
+.section-box {
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.section-sep { -fx-background-color: -color-border; }
+
+/* ── Status bar ────────────────────────────────────────────────── */
+.status-bar { -fx-background-color: -color-surface; -fx-border-color: -color-border; -fx-border-width: 0 0 1 0; }
+.status-ok       { -fx-text-fill: -color-green; -fx-font-weight: bold; }
+.status-conflict { -fx-text-fill: -color-red;   -fx-font-weight: bold; }
+
+/* ── Conflict cell ─────────────────────────────────────────────── */
+.conflict-icon { -fx-text-fill: -color-orange; }
+.conflict-file { -fx-text-fill: -color-text; -fx-font-family: "Monospaced"; }
+
+/* ── Help text ─────────────────────────────────────────────────── */
+.help-text {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 12px;
+    -fx-background-color: -color-surface;
+    -fx-background-radius: 8px;
+    -fx-padding: 12;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+/* ── No repo placeholder ───────────────────────────────────────── */
+.no-repo { -fx-background-color: -color-bg; }
+.no-repo-icon { -fx-text-fill: -color-muted; -fx-font-size: 72px; }
+.no-repo-msg  { -fx-text-fill: -color-muted; -fx-font-size: 16px; }
+
+/* ── Scroll pane ───────────────────────────────────────────────── */
+.scroll-dark { -fx-background-color: transparent; -fx-background: transparent; }
+.scroll-dark .viewport { -fx-background-color: transparent; }
+.scroll-dark .scroll-bar { -fx-background-color: -color-surface; }
+.scroll-dark .scroll-bar .thumb { -fx-background-color: -color-border; -fx-background-radius: 4px; }
+
+/* ── SplitPane ─────────────────────────────────────────────────── */
+.split-pane { -fx-background-color: -color-bg; -fx-padding: 0; }
+.split-pane-divider { -fx-padding: 0 1 0 1; -fx-background-color: -color-border; }
+.branches-split { -fx-background-color: -color-bg; }
